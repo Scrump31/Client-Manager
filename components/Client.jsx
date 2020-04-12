@@ -16,7 +16,7 @@ const Client = ({ id, name, email, phone, address, company, notes }) => {
         </td>
         <td className="border px-4 py-2">
           <button
-            name={`edit ${name}`}
+            aria-label={`edit ${name}`}
             className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
           >
             <Link href="/edit/[id]" as={`/edit/${id}`}>
