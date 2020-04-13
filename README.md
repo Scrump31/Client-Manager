@@ -1,30 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+# Test a Next.js App with Cypress
 
-## Getting Started
+## Video Lesson Outline:
 
-First, run the development server:
+[# 1 - Application Overview](https://youtu.be/xIl-0ZTtOHY)
 
-```bash
-npm run dev
-# or
-yarn dev
+[# 2 - Install Cypress and eslint-plugin-cypress](https://youtu.be/dkekN7rKF1Y)
+
+[# 3 - Configure Cypress.json File](https://youtu.be/smd5UQUq5Uc)
+
+[# 4 - Write Our First Test](https://youtu.be/TLjFmOpGjUU)
+
+[# 5 - Write Better Tests with Cypress Testing Library](https://youtu.be/a1SvfURYxTQ)
+
+[# 6 - Run Cypress in Multiple Browsers](https://youtu.be/z7s-acDceCs)
+
+[# 7 - Test The Client Flow ](https://youtu.be/RupBr0w-bAk)
+
+## Installing/Running the app
+
+### Create a .env file
+
+```
+USERNAME="name you want displayed in project here"
+MONGODB_URI="database creds here"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm install
+npm run dev
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Running Tests
 
-## Learn More
+```bash
+npm run cy:open
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Formatting with Prettier
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn format
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on ZEIT Now
+[NextJS](https://nextjs.org/)
 
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[Cypress-testing-library](https://testing-library.com/docs/cypress-testing-library/intro)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Tailwindcss](https://tailwindcss.com/)
+
+[React-notifications-component](https://teodosii.github.io/react-notifications-component/)
+
+[React-icons](https://github.com/react-icons/react-icons#readme)
+
+[Mongoose](https://mongoosejs.com/)
+
+[MongoDB Atlas](https://www.mongodb.com/cloud/atlas/)
+
+[Prettier](https://prettier.io/docs/en/install.html)
