@@ -160,7 +160,7 @@ const Add = () => {
               name="add-client"
             >
               Add{' '}
-              <span style={{ display: 'inline-block', height: '0.85em' }}>
+              <span className="inline-block" style={{ height: '0.85em' }}>
                 <MdPersonAdd />
               </span>
             </button>

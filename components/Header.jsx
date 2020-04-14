@@ -22,9 +22,9 @@ const Header = () => (
             </Link>
           </li>
         )}
-        {useRouter().pathname !== '/add' && (
+        {useRouter().pathname !== '/add-client' && (
           <li className="self-center text-2xl hover:text-gray-500 ml-5">
-            <Link href="/add">
+            <Link href="/add-client">
               <a>Add Client</a>
             </Link>
           </li>
