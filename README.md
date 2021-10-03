@@ -26,14 +26,14 @@ MONGODB_URI="database creds here"
 ```
 
 ```bash
-npm install
-npm run dev
+yarn
+yarn dev
 ```
 
 ## Running Tests
 
 ```bash
-npm run cy:open
+yarn cy:open
 ```
 
 ### Formatting with Prettier
