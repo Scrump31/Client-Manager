@@ -4,7 +4,7 @@ import { store } from 'react-notifications-component'
  * @param  {string} notifyType Sets bgcolor. Use'success' or 'danger'
  * @param  {string} title ex. 'Success!' or 'Danger'
  */
-export default (message, notifyType, title) => {
+const notifyMessage = (message, notifyType, title) => {
   return store.addNotification({
     title,
     message,
@@ -19,3 +19,5 @@ export default (message, notifyType, title) => {
     }
   })
 }
+
+export default notifyMessage
