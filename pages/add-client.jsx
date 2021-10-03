@@ -1,8 +1,8 @@
-import { useState } from 'react'
 import fetch from 'isomorphic-unfetch'
+import { useState } from 'react'
 import { MdPersonAdd } from 'react-icons/md'
-import notifyMessage from '../utils/notify-message'
 import CancelBtn from '../components/CancelBtn'
+import notifyMessage from '../utils/notify-message'
 
 const Add = () => {
   const emptyForm = {
@@ -99,7 +99,7 @@ const Add = () => {
               <input
                 type="phone"
                 className="form-input mt-1 block w-full"
-                id="client-phone"
+                id="phone"
                 name="phone"
                 value={newClient.phone}
                 onChange={handleChange}

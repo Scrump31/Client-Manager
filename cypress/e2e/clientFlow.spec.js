@@ -19,9 +19,9 @@ describe('Client Flow', () => {
     cy.url().should('equal', 'http://localhost:3000/')
     cy.findByText('Test Notes Upda...').should('be.visible')
     // Delete client
-    cy.findByLabelText('edit Test Name').click()
+    cy.findByRole('button', { name: /edit test name/i }).click()
     cy.findByText('Delete').click()
     cy.url().should('equal', 'http://localhost:3000/')
-    cy.findByText('Test Notes Upda...').should('not.visible')
+    cy.findByText('"Test Name successfully deleted"').should('be.visible')
   })
 })
