@@ -11,10 +11,10 @@ export default async (req, res) => {
 
     if (!users.length) {
       res.status(404).send('no users found')
+    } else {
+      res.status(200).json({
+        users: users.map(user => user.toObject({ getters: true }))
+      })
     }
-
-    res.status(200).json({
-      users: users.map(user => user.toObject({ getters: true }))
-    })
   }
 }

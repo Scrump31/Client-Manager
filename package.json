@@ -13,21 +13,21 @@
     "autoprefixer": "^9.7.5",
     "dotenv": "^8.2.0",
     "isomorphic-unfetch": "^3.0.0",
-    "mongoose": "^5.9.7",
-    "mongoose-unique-validator": "^2.0.3",
-    "next": "11.1.0",
-    "next-connect": "^0.6.1",
-    "postcss-import": "^12.0.1",
-    "prettier": "^2.0.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "mongoose": "^6.0.8",
+    "mongoose-unique-validator": "^2.0.4",
+    "next": "11.1.2",
+    "next-connect": "^0.10.2",
+    "postcss-import": "^14.0.2",
+    "prettier": "^2.4.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-icons": "^3.9.0",
-    "react-notifications-component": "^2.4.0",
-    "tailwindcss": "^1.2.0"
+    "react-notifications-component": "^3.1.0",
+    "tailwindcss": "^1.2.0",
+    "@tailwindcss/custom-forms": "^0.2.1"
   },
   "devDependencies": {
-    "@tailwindcss/custom-forms": "^0.2.1",
-    "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.19.0"
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.26.1"
   }
 }

@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
+import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { MdPersonAdd } from 'react-icons/md'
 import ClientList from '../components/ClientList'
