@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
 import Link from 'next/link'
+import PropTypes from 'prop-types'
 import { FaRegEdit } from 'react-icons/fa'
 
 const Client = ({ id, name, email, phone, address, company, notes }) => {

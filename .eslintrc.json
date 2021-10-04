@@ -16,6 +16,6 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "testing-library/react", "jest-dom/recommended"],
   "rules": { "react/react-in-jsx-scope": "off" }
 }
