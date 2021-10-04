@@ -5,7 +5,9 @@ export default async (req, res) => {
     const { id, name } = req.body
 
     try {
-      const client = await (await db()).models.Client.findOneAndRemove({
+      const client = await (
+        await db()
+      ).models.Client.findOneAndRemove({
         _id: id
       })
 

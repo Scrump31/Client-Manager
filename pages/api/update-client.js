@@ -4,7 +4,9 @@ export default async (req, res) => {
   if (req.method === 'POST') {
     const { id, name, email, phone, address, company, notes } = req.body
     try {
-      await (await db()).models.Client.findByIdAndUpdate(
+      await (
+        await db()
+      ).models.Client.findByIdAndUpdate(
         {
           _id: id
         },

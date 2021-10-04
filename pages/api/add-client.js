@@ -5,15 +5,18 @@ export default async (req, res) => {
     const { name, email, phone, address, company, notes } = req.body
 
     // Check for duplicate name
-    const checkDuplicate = await (await db()).models.Client.findOne({
+    const checkDuplicate = await (
+      await db()
+    ).models.Client.findOne({
       name
     })
     if (checkDuplicate !== null) {
       res.status(409).json({ message: `${name} is already in use` })
     }
-
     try {
-      const client = await (await db()).models.Client({
+      const client = await (
+        await db()
+      ).models.Client({
         name,
         email,
         phone,

@@ -1,8 +1,8 @@
-import { useState } from 'react'
 import fetch from 'isomorphic-unfetch'
+import { useState } from 'react'
 import { MdPersonAdd } from 'react-icons/md'
-import notifyMessage from '../utils/notify-message'
 import CancelBtn from '../components/CancelBtn'
+import notifyMessage from '../utils/notify-message'
 
 const Add = () => {
   const emptyForm = {
@@ -36,6 +36,10 @@ const Add = () => {
       notifyMessage(message, 'success', 'Success!')
       setNewClient(emptyForm)
     } else if (res.status === 409) {
+      const resData = await res.json()
+      const message = JSON.stringify(resData.message)
+      notifyMessage(message, 'danger', 'Error')
+    } else if (res.status === 400) {
       const resData = await res.json()
       const message = JSON.stringify(resData.message)
       notifyMessage(message, 'danger', 'Error')
