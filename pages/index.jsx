@@ -34,6 +34,9 @@ const Home = ({ clients }) => (
         </button>
       </Link>
     </div>
+    {!clients.length ? (
+      <div className="text-3xl text-center">No current clients</div>
+    ) : null}
   </>
 )
 

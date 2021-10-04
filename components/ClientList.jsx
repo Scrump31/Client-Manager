@@ -2,8 +2,10 @@ import PropTypes from 'prop-types'
 import Client from './Client'
 
 const ClientList = ({ clients }) => {
-  const list = clients.map(client => <Client key={client.id} {...client} />)
-  return <>{list}</>
+  if (clients) {
+    const list = clients.map(client => <Client key={client.id} {...client} />)
+    return <>{list}</>
+  }
 }
 
 ClientList.propTypes = {
