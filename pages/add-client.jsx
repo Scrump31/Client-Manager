@@ -15,14 +15,14 @@ const Add = () => {
   }
   const [newClient, setNewClient] = useState(emptyForm)
 
-  const handleChange = () => {
+  const handleChange = event => {
     setNewClient(prevState => ({
       ...prevState,
       [event.target.name]: event.target.value
     }))
   }
 
-  const handleSubmit = async () => {
+  const handleSubmit = async event => {
     event.preventDefault()
     const res = await fetch('http://localhost:3000/api/add-client', {
       method: 'POST',
@@ -53,6 +53,7 @@ const Add = () => {
           <MdPersonAdd />
         </header>
         <form
+          data-testid="add-form"
           onSubmit={handleSubmit}
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
@@ -103,7 +104,7 @@ const Add = () => {
               <input
                 type="phone"
                 className="form-input mt-1 block w-full"
-                id="client-phone"
+                id="phone"
                 name="phone"
                 value={newClient.phone}
                 onChange={handleChange}

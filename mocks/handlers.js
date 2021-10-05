@@ -20,5 +20,25 @@ export const handlers = [
         clients: fakeClient
       })
     )
+  }),
+
+  rest.post('http://localhost:3000/api/add-client', (req, res, ctx) => {
+    const { name, email, phone } = req.body
+
+    if (name && email && phone) {
+      return res(
+        ctx.status(200),
+        ctx.json({
+          message: `${name} successfully added`
+        })
+      )
+    } else if (!name || !email || !phone) {
+      return res(
+        ctx.status(400),
+        ctx.json({
+          message: 'error occurred'
+        })
+      )
+    }
   })
 ]
