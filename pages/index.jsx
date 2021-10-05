@@ -40,15 +40,6 @@ const Home = ({ clients }) => (
   </>
 )
 
-Home.getInitialProps = async function () {
-  const res = await fetch('http://localhost:3000/api/clients')
-  const data = await res.json()
-
-  return {
-    clients: data.users
-  }
-}
-
 Home.propTypes = {
   clients: PropTypes.arrayOf(
     PropTypes.shape({
@@ -61,6 +52,20 @@ Home.propTypes = {
       notes: PropTypes.string
     })
   )
+}
+export async function getServerSideProps(context) {
+  const res = await fetch('http://localhost:3000/api/clients')
+  const data = await res.json()
+
+  if (!data) {
+    return {
+      props: { clients: [] }
+    }
+  }
+
+  return {
+    props: { clients: data.clients }
+  }
 }
 
 export default Home

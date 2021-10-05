@@ -2,18 +2,18 @@ import db from '../../db/mongoose'
 
 export default async (req, res) => {
   if (req.method === 'GET') {
-    let users
+    let clients
     try {
-      users = await (await db()).models.Client.find({})
+      clients = await (await db()).models.Client.find({})
     } catch (error) {
-      res.status(404).send('error retrieving users')
+      res.status(404).send('error retrieving clients')
     }
 
-    if (!users.length) {
-      res.status(404).json({ users: [] })
+    if (!clients.length) {
+      res.status(404).json({ clients: [] })
     } else {
       res.status(200).json({
-        users: users.map(user => user.toObject({ getters: true }))
+        clients: clients.map(user => user.toObject({ getters: true }))
       })
     }
   }
