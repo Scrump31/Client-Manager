@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "qa": "NODE_ENV=qa next dev",
     "build": "next build",
     "start": "next start",
     "format": "prettier \"**/*.+(js|json|css|)\" --write --check",
