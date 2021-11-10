@@ -22,8 +22,11 @@
 
 ```
 USERNAME="name you want displayed in project here"
-MONGODB_URI="database creds here"
+MONGODB_URI_DEV="database creds here for a Dev environment"
+MONGODB_URI_QA="database creds here for a QA environment"
 ```
+
+- Note: It is not required to use both MONGODB_URI_DEV and MONGODB_URI_QA options, but you do need to use at least one.
 
 ```bash
 yarn
