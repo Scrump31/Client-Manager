@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react'
 import fetch from 'isomorphic-unfetch'
-import PropTypes from 'prop-types'
 import Router from 'next/router'
-import notifyMessage from '../../utils/notify-message'
-import { MdDeleteForever, MdUpdate } from 'react-icons/md'
+import PropTypes from 'prop-types'
+import { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa'
-
+import { MdDeleteForever, MdUpdate } from 'react-icons/md'
 import CancelBtn from '../../components/CancelBtn'
+import notifyMessage from '../../utils/notify-message'
 
 const Edit = ({ data }) => {
   const [client, setClient] = useState()
@@ -15,10 +14,10 @@ const Edit = ({ data }) => {
     setClient(data)
   }, [])
 
-  const handleChange = () => {
+  const handleChange = e => {
     setClient(prevState => ({
       ...prevState,
-      [event.target.name]: event.target.value
+      [e.target.name]: e.target.value
     }))
   }
 
@@ -206,7 +205,7 @@ const Edit = ({ data }) => {
 
 Edit.getInitialProps = async function (context) {
   const { id } = context.query
-  const res = await fetch(`http://localhost:3000/api/edit-client?id=${id}`)
+  const res = await fetch(`http://localhost:3000/api/get-client?id=${id}`)
   const data = await res.json()
 
   return { data: data.user }
