@@ -205,7 +205,7 @@ const Edit = ({ data }) => {
 
 Edit.getInitialProps = async function (context) {
   const { id } = context.query
-  const res = await fetch(`http://localhost:3000/api/edit-client?id=${id}`)
+  const res = await fetch(`http://localhost:3000/api/get-client?id=${id}`)
   const data = await res.json()
 
   return { data: data.user }
