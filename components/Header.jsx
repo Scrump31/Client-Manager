@@ -12,7 +12,10 @@ const Header = () => (
         >
           <FaAddressCard />
         </span>
-        {process.env.username}&apos;s Clients{' '}
+        {process.env.NEXT_PUBLIC_USERNAME
+          ? process.env.NEXT_PUBLIC_USERNAME
+          : 'User'}
+        &apos;s Clients{' '}
       </li>
       <nav className="flex justify-between">
         {useRouter().pathname !== '/' && (

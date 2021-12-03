@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  api:
+    image: clientaddressnext
+    restart: on-failure
+    build:
+      context: .
+      args:
+        - USERNAME=${NEXT_PUBLIC_USERNAME}
+    environment:
+      - MONGO_URI=${MONGO_URI}
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    restart: on-failure
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data/db
+      - mongo-config:/data/configdb
+volumes:
+  mongo-data:
+    driver: local
+  mongo-config:
+    driver: local
